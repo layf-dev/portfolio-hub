@@ -135,7 +135,7 @@ body {
 .project-card {
     background: rgba(255, 255, 255, 0.015);
     border: 1px solid rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(4px);
     border-radius: 20px;
     overflow: hidden;
     text-decoration: none;
@@ -144,6 +144,8 @@ body {
     flex-direction: column;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
+    will-change: transform, opacity;
+    transform: translateZ(0);
 }
 
 .project-card::before {
@@ -161,7 +163,7 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) translateZ(0);
     border-color: rgba(212, 175, 55, 0.3);
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 
@@ -186,6 +188,8 @@ body {
     object-fit: cover;
     filter: saturate(0.8) brightness(0.9);
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
 
 .project-card:hover .card-image img {
