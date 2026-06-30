@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Премиальные сайты для автобизнеса</title>
+    <title>Premium Web Solutions | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
@@ -14,16 +14,24 @@
     
     <main class="container">
         <header class="header">
-            <h1 class="title">WEBSITE <span class="accent">SOLUTIONS</span></h1>
-            <p class="subtitle">ПРЕМИАЛЬНЫЕ РЕШЕНИЯ ДЛЯ ДЕТЕЙЛИНГА И ТЮНИНГА</p>
+            <h1 class="title">PREMIUM <span class="accent">STUDIO</span></h1>
+            <p class="subtitle">ИНТЕРАКТИВНЫЕ ДИЗАЙН-КОНЦЕПТЫ И ВЕБ-РЕШЕНИЯ ДЛЯ БИЗНЕСА</p>
             <div class="header-divider"></div>
-            <p class="description">Выберите один из трех топовых концептов дизайна для вашего бизнеса. Адаптация, настройка и запуск за несколько дней.</p>
+            <p class="description">Эксклюзивные демонстрационные шаблоны, разработанные на современном стеке технологий. Наведите курсор на карточку для просмотра демо.</p>
         </header>
+
+        <!-- Dynamic Filter Controls -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Все решения</button>
+            <button class="filter-btn" data-filter="auto">Автобизнес</button>
+            <button class="filter-btn" data-filter="furniture">Мебель & Интерьер</button>
+            <button class="filter-btn" data-filter="beauty">Бьюти & Велнес</button>
+        </div>
 
         <div class="projects-grid">
             
             <!-- Project 1: Luxury Detailing -->
-            <a href="https://layf-dev.github.io/brooklands-detailing/" class="project-card card-luxury" target="_blank">
+            <a href="https://layf-dev.github.io/brooklands-detailing/" class="project-card" data-category="auto" target="_blank">
                 <div class="card-image">
                     <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80" alt="Luxury Detailing">
                     <div class="card-overlay">
@@ -32,16 +40,16 @@
                 </div>
                 <div class="card-content">
                     <div class="tags">
-                        <span class="tag">Люкс</span>
-                        <span class="tag">Золото</span>
+                        <span class="tag" style="border-color: rgba(212,175,55,0.3); color: #d4af37;">Премиум</span>
+                        <span class="tag">Детейлинг</span>
                     </div>
                     <h2>LUXURY DETAILING</h2>
-                    <p>Идеально для премиум-студий. Строгий дизайн с акцентом на золотые детали и интерактивный калькулятор.</p>
+                    <p>Элегантное решение для премиум-студий. Строгий дизайн с акцентом на латунные детали и интерактивный калькулятор услуг.</p>
                 </div>
             </a>
 
             <!-- Project 2: Tuning Studio Pro -->
-            <a href="https://layf-dev.github.io/tuning-studio-pro/" class="project-card card-tuning" target="_blank">
+            <a href="https://layf-dev.github.io/tuning-studio-pro/" class="project-card" data-category="auto" target="_blank">
                 <div class="card-image">
                     <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80" alt="Tuning Studio Pro">
                     <div class="card-overlay">
@@ -50,16 +58,16 @@
                 </div>
                 <div class="card-content">
                     <div class="tags">
-                        <span class="tag">Агрессия</span>
+                        <span class="tag" style="border-color: rgba(239,68,68,0.3); color: #ef4444;">Агрессивный</span>
                         <span class="tag">Тюнинг</span>
                     </div>
                     <h2>TUNING STUDIO PRO</h2>
-                    <p>Брутальный, агрессивный стиль для тюнинг-ателье. Кибер-помехи, бегущая строка и мощные анимации.</p>
+                    <p>Брутальный стиль для тюнинг-ателье. Эффекты кибер-помех, бегущая строка и мощные анимации переходов.</p>
                 </div>
             </a>
 
             <!-- Project 3: Minimalist Auto -->
-            <a href="https://layf-dev.github.io/minimalist-auto/" class="project-card card-minimalist" target="_blank">
+            <a href="https://layf-dev.github.io/minimalist-auto/" class="project-card" data-category="auto" target="_blank">
                 <div class="card-image">
                     <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80" alt="Minimalist Auto">
                     <div class="card-overlay">
@@ -68,11 +76,65 @@
                 </div>
                 <div class="card-content">
                     <div class="tags">
-                        <span class="tag">Минимализм</span>
-                        <span class="tag">Ч/Б</span>
+                        <span class="tag" style="border-color: rgba(255,255,255,0.3); color: #fff;">Минимализм</span>
+                        <span class="tag">Ч/Б дизайн</span>
                     </div>
                     <h2>MINIMALIST AUTO</h2>
-                    <p>Строгий монохром в стиле фестивальных сайтов. Кастомный следящий курсор и слайдер "До / После".</p>
+                    <p>Строгий монохром в стиле фестивальных сайтов. Интерактивный следящий курсор и классический слайдер сравнения До / После.</p>
+                </div>
+            </a>
+
+            <!-- Project 4: Modus Studio -->
+            <a href="modus/index.html" class="project-card" data-category="furniture" target="_blank">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80" alt="Modus Studio">
+                    <div class="card-overlay">
+                        <span class="btn-demo">Смотреть Демо</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag" style="border-color: rgba(57,207,208,0.3); color: #39cfd0;">Конфигуратор</span>
+                        <span class="tag">React</span>
+                    </div>
+                    <h2>MODUS STUDIO</h2>
+                    <p>Премиальный мебельный конфигуратор. Интерактивный подбор тканей, наполнения диванов, расчет цены на лету и корзина.</p>
+                </div>
+            </a>
+
+            <!-- Project 5: Forte Studio -->
+            <a href="forte/index.html" class="project-card" data-category="furniture" target="_blank">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80" alt="Forte Studio">
+                    <div class="card-overlay">
+                        <span class="btn-demo">Смотреть Демо</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag" style="border-color: rgba(212,168,128,0.3); color: #c5a880;">Эксклюзив</span>
+                        <span class="tag">Гармошка</span>
+                    </div>
+                    <h2>FORTE STUDIO</h2>
+                    <p>Элитное мебельное производство. Выдвижной горизонтальный шоукейс разделов каталога, опросник-квиз стоимости и форма отправки эскизов.</p>
+                </div>
+            </a>
+
+            <!-- Project 6: Aura Clinic -->
+            <a href="aura/index.html" class="project-card" data-category="beauty" target="_blank">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80" alt="Aura Clinic">
+                    <div class="card-overlay">
+                        <span class="btn-demo">Смотреть Демо</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="tags">
+                        <span class="tag" style="border-color: rgba(227,166,143,0.3); color: #e3a68f;">Matcha Style</span>
+                        <span class="tag">Линза До/После</span>
+                    </div>
+                    <h2>AURA CLINIC</h2>
+                    <p>Авангардная клиника косметологии. Фиксированный боковой сайдбар, 3D-наклонные карточки зон лица, интерактивная линза-лупа До/После и велнес-квиз.</p>
                 </div>
             </a>
 
@@ -86,5 +148,37 @@
             <p class="footer-hint">Обсудим ваш проект — ответим в течение часа</p>
         </footer>
     </main>
+
+    <!-- Custom Category Filter Script -->
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Toggle active button class
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Filter cards
+                projectCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filterValue === 'all' || cardCategory === filterValue) {
+                        card.style.display = 'flex';
+                        // Add fade-in transition
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transition = 'opacity 0.4s ease';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
