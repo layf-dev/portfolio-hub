@@ -3,201 +3,449 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Web Solutions | Portfolio</title>
+    <title>WEBKINETIC | Next-Gen Web Laboratory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">WEB<span class="accent">KINETIC</span></div>
+            <div class="preloader-bar-wrapper">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
+
     <div class="bg-glow"></div>
     
+    <!-- Premium Grid Lines (Asymmetric background) -->
+    <div class="bg-grid-lines">
+        <span style="left: 15%;"></span>
+        <span style="left: 45%;"></span>
+        <span style="left: 80%;"></span>
+    </div>
+    
+    <!-- Large decorative background text (Journalist style) -->
+    <div class="bg-watermark">KINETIC</div>
+
     <main class="container">
-        <header class="header">
-            <h1 class="title">PREMIUM <span class="accent">STUDIO</span></h1>
-            <p class="subtitle">ИНТЕРАКТИВНЫЕ ДИЗАЙН-КОНЦЕПТЫ И ВЕБ-РЕШЕНИЯ ДЛЯ БИЗНЕСА</p>
-            <div class="header-divider"></div>
-            <p class="description">Эксклюзивные демонстрационные шаблоны, разработанные на современном стеке технологий. Наведите курсор на карточку для просмотра демо.</p>
+        <!-- ASYMMETRIC HERO SECTION -->
+        <header class="hero-v2">
+            <div class="hero-text-block">
+                <h1 class="hero-huge-title animate-hero">
+                    <span class="split-left">WE BUILD</span><br>
+                    <span class="split-right outline-text">KINETIC</span><br>
+                    <span class="split-left">INTERFACES</span>
+                </h1>
+                <p class="hero-desc-v2 animate-hero">
+                    Студия интерактивной веб-разработки полного цикла. Мы ломаем шаблоны скучного веба и создаем сайты, которые вовлекают физикой, анимацией и сверхбыстрой загрузкой.
+                </p>
+                <div class="hero-actions animate-hero">
+                    <a href="#services-v2" class="btn-main scroll-to">Услуги</a>
+                    <a href="#projects-v2" class="btn-outline-action scroll-to">Портфолио</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual-block animate-hero" id="hero-stats-card">
+                <div class="interactive-card-badge">WEBKINETIC // METRICS</div>
+                <div class="hero-stats-widget">
+                    <div class="stats-grid">
+                        <div class="stat-tile" data-value="98" data-suffix="%">
+                            <span class="stat-num">0%</span>
+                            <span class="stat-label">Google PageSpeed</span>
+                        </div>
+                        <div class="stat-tile" data-value="45" data-suffix="+">
+                            <span class="stat-num">0+</span>
+                            <span class="stat-label">Интерфейсов</span>
+                        </div>
+                        <div class="stat-tile" data-value="2.4" data-prefix="x">
+                            <span class="stat-num">x0.0</span>
+                            <span class="stat-label">Рост конверсии</span>
+                        </div>
+                        <div class="stat-tile" data-value="60" data-suffix=" FPS">
+                            <span class="stat-num">0 FPS</span>
+                            <span class="stat-label">Плавность графики</span>
+                        </div>
+                    </div>
+                    <div class="widget-decor-line"></div>
+                </div>
+            </div>
         </header>
 
-        <!-- Dynamic Filter Controls -->
-        <div class="filter-tabs">
-            <button class="filter-btn active" data-filter="all">Все решения</button>
-            <button class="filter-btn" data-filter="auto">Автобизнес</button>
-            <button class="filter-btn" data-filter="furniture">Мебель & Интерьер</button>
-            <button class="filter-btn" data-filter="beauty">Бьюти & Велнес</button>
-            <button class="filter-btn" data-filter="leisure">Досуг & Коворкинг</button>
-        </div>
-
-        <div class="projects-grid">
-            
-            <!-- Project 1: Luxury Detailing -->
-            <a href="detailing/index.html" class="project-card" data-category="auto" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800" alt="Luxury Detailing">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>LUXURY DETAILING</h2>
-                    <p>Элегантное решение для премиум-студий. Строгий дизайн с акцентом на латунные детали и интерактивный калькулятор услуг.</p>
-                </div>
-            </a>
-
-            <!-- Project 2: Tuning Studio Pro -->
-            <a href="tuning/index.html" class="project-card" data-category="auto" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800" alt="Tuning Studio Pro">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>TUNING STUDIO PRO</h2>
-                    <p>Брутальный стиль для тюнинг-ателье. Эффекты кибер-помех, бегущая строка и мощные анимации переходов.</p>
-                </div>
-            </a>
-
-            <!-- Project 3: Minimalist Auto -->
-            <a href="minimalist/index.html" class="project-card" data-category="auto" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800" alt="Minimalist Auto">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>MINIMALIST AUTO</h2>
-                    <p>Строгий монохром в стиле фестивальных сайтов. Интерактивный следящий курсор и классический слайдер сравнения До / После.</p>
-                </div>
-            </a>
-
-            <!-- Project 4: Modus Studio -->
-            <a href="modus/index.html" class="project-card" data-category="furniture" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Modus Studio">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>MODUS STUDIO</h2>
-                    <p>Премиальный мебельный конфигуратор. Интерактивный подбор тканей, наполнения диванов, расчет цены на лету и корзина.</p>
-                </div>
-            </a>
-
-            <!-- Project 5: Forte Studio -->
-            <a href="forte/index.html" class="project-card" data-category="furniture" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Forte Studio">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>FORTE STUDIO</h2>
-                    <p>Элитное мебельное производство. Выдвижной горизонтальный шоукейс разделов каталога, опросник-квиз стоимости и форма отправки эскизов.</p>
-                </div>
-            </a>
-
-            <!-- Project 6: Aura Clinic -->
-            <a href="aura/index.html" class="project-card" data-category="beauty" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800" alt="Aura Clinic">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>AURA CLINIC</h2>
-                    <p>Авангардная клиника косметологии. Фиксированный боковой сайдбар, 3D-наклонные карточки зон лица, интерактивная линза-лупа До/После и велнес-квиз.</p>
-                </div>
-            </a>
-
-            <!-- Project 7: Sense Lab -->
-            <a href="scent/index.html" class="project-card" data-category="beauty" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=800" alt="Sense Lab">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>SENSE LAB</h2>
-                    <p>Ателье селективной парфюмерии. Ольфакторный симулятор с динамическим смешиванием масел и цвета жидкости, опросник ароматического архетипа.</p>
-                </div>
-            </a>
-
-            <!-- Project 8: Anticafe Silence & Move -->
-            <a href="anticafe/index.html" class="project-card" data-category="leisure" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" alt="Anticafe Silence & Move">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>ТИШИНА & ДВИЖ</h2>
-                    <p>Антикафе нового поколения. Журнальный брутализм, интерактивный переключатель атмосферы (коворкинг vs гейминг), генерация звука на Web Audio API и калькулятор тарифа.</p>
-                </div>
-            </a>
-
-            <!-- Project 9: Avito Pro Course -->
-            <a href="avitoprofit/index.html" class="project-card" data-category="leisure" target="_blank">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Avito Pro Course">
-                    <div class="card-overlay">
-                        <span class="btn-demo">Смотреть Демо</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h2>AVITO PRO</h2>
-                    <p>Landing page онлайн-курса по продвижению на Авито. Минималистичный темный дизайн, интерактивный ROI-калькулятор лидов для разных ниш бизнеса и аккордеон учебных модулей.</p>
-                </div>
-            </a>
-
-        </div>
-        
-        <footer class="footer">
-            <div class="contact-links">
-                <a href="https://t.me/layf_ceo" class="btn-contact btn-tg" target="_blank">НАПИСАТЬ В TELEGRAM</a>
-                <a href="tel:+79600451512" class="btn-contact btn-phone">+7 (960) 045-15-12</a>
+        <!-- PORTFOLIO SECTION (Horizontal 3D Showcase) -->
+        <section class="projects-section-v2 reveal" id="projects-v2">
+            <div class="section-header-v2">
+                <div class="section-num">01 // PROJECTS</div>
+                <h2 class="section-title-v2">Наши работы</h2>
             </div>
-            <p class="footer-hint">Обсудим ваш проект — ответим в течение часа</p>
-        </footer>
+
+            <div class="slider-outer-wrapper">
+                <button class="slider-arrow prev-slide" aria-label="Назад">&larr;</button>
+                <div class="slider-window">
+                    <div class="projects-slider">
+                        <!-- Project 1: Luxury Detailing -->
+                        <a href="detailing/index.html" class="project-card active" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800" alt="Luxury Detailing">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>LUXURY DETAILING</h2>
+                                <p>Элегантное решение для премиум-студий. Строгий дизайн с акцентом на латунные детали и интерактивный калькулятор услуг.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 2: Tuning Studio Pro -->
+                        <a href="tuning/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800" alt="Tuning Studio Pro">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>TUNING STUDIO PRO</h2>
+                                <p>Брутальный стиль для тюнинг-ателье. Эффекты кибер-помех, бегущая строка и мощные анимации переходов.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 3: Minimalist Auto -->
+                        <a href="minimalist/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800" alt="Minimalist Auto">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>MINIMALIST AUTO</h2>
+                                <p>Строгий монохром в стиле фестивальных сайтов. Интерактивный следящий курсор и классический слайдер сравнения До / После.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 4: Modus Studio -->
+                        <a href="modus/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Modus Studio">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>MODUS STUDIO</h2>
+                                <p>Премиальный мебельный конфигуратор. Интерактивный подбор тканей, наполнения диванов, расчет цены на лету и корзина.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 5: Forte Studio -->
+                        <a href="forte/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Forte Studio">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>FORTE STUDIO</h2>
+                                <p>Элитное мебельное производство. Выдвижной горизонтальный шоукейс разделов каталога, опросник-квиз стоимости и форма отправки эскизов.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 6: Aura Clinic -->
+                        <a href="aura/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800" alt="Aura Clinic">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>AURA CLINIC</h2>
+                                <p>Авангардная клиника косметологии. Фиксированный боковой сайдбар, 3D-наклонные карточки зон лица, интерактивная линза-лупа До/После и велнес-квиз.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 7: Sense Lab -->
+                        <a href="scent/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=800" alt="Sense Lab">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>SENSE LAB</h2>
+                                <p>Ателье селективной парфюмерии. Ольфакторный симулятор с динамическим смешиванием масел и цвета жидкости, опросник ароматического архетипа.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 8: Anticafe Silence & Move -->
+                        <a href="anticafe/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" alt="Anticafe Silence & Move">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>ТИШИНА & ДВИЖ</h2>
+                                <p>Антикафе нового поколения. Журнальный брутализм, интерактивный переключатель атмосферы (коворкинг vs гейминг), генерация звука на Web Audio API и калькулятор тарифа.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 9: Avito Pro Course -->
+                        <a href="avitoprofit/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Avito Pro Course">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>AVITO PRO</h2>
+                                <p>Landing page онлайн-курса по продвижению на Авито. Минималистичный темный дизайн, интерактивный ROI-калькулятор лидов для разных ниш бизнеса и аккордеон учебных модулей.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="slider-arrow next-slide" aria-label="Вперед">&rarr;</button>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+                <span class="dot" data-index="6"></span>
+                <span class="dot" data-index="7"></span>
+                <span class="dot" data-index="8"></span>
+            </div>
+        </section>
+
+        <!-- LAB & INTERACTIVE SECTION -->
+        <section class="playground-section-v2 reveal" id="lab-v2">
+            <div class="section-header-v2">
+                <div class="section-num">02 // PLAYGROUND</div>
+                <h2 class="section-title-v2">Лаборатория кинетики</h2>
+            </div>
+            
+            <div class="playground-container-v2">
+                <div class="canvas-wrapper-v2">
+                    <canvas id="playground-canvas"></canvas>
+                    <div class="canvas-hint">Кликните по экрану или наведите мышь</div>
+                </div>
+                
+                <div class="playground-controls-v2">
+                    <div class="control-header-v2">
+                        <h3>Контрольная панель</h3>
+                        <p>Настройте физику частиц в реальном времени, чтобы почувствовать отзывчивость кода:</p>
+                    </div>
+                    
+                    <div class="control-groups-v2">
+                        <div class="control-group-v2">
+                            <label for="slider-speed">Скорость: <span id="val-speed">1.2</span></label>
+                            <input type="range" id="slider-speed" min="0.5" max="5" step="0.1" value="1.2">
+                        </div>
+                        
+                        <div class="control-group-v2">
+                            <label for="slider-gravity">Гравитация: <span id="val-gravity">110</span></label>
+                            <input type="range" id="slider-gravity" min="50" max="250" step="10" value="110">
+                        </div>
+                        
+                        <div class="control-group-v2">
+                            <label for="slider-size">Размер: <span id="val-size">3.5</span></label>
+                            <input type="range" id="slider-size" min="1" max="6" step="0.5" value="3.5">
+                        </div>
+
+                        <div class="control-group-v2">
+                            <label>Цвет:</label>
+                            <div class="color-options-v2">
+                                <button class="color-btn-v2" data-color="cyan" style="--btn-color: #00f2fe;"></button>
+                                <button class="color-btn-v2" data-color="platinum" style="--btn-color: #e2e8f0;"></button>
+                                <button class="color-btn-v2" data-color="purple" style="--btn-color: #a855f7;"></button>
+                                <button class="color-btn-v2 active" data-color="rainbow" style="background: linear-gradient(45deg, #00f2fe, #a855f7);"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ASYMMETRIC SERVICES & PRICING -->
+        <section class="services-section-v2 reveal" id="services-v2">
+            <div class="section-header-v2">
+                <div class="section-num">03 // PRICING</div>
+                <h2 class="section-title-v2">Услуги и цены</h2>
+            </div>
+            
+            <div class="split-services-container">
+                <!-- Panel 1: Landings -->
+                <div class="service-panel" data-index="0">
+                    <div class="panel-header-vertical">
+                        <span class="panel-num">01</span>
+                        <h3>ЛЕНДИНГИ</h3>
+                        <span class="panel-price-short">от 6к</span>
+                    </div>
+                    <div class="panel-content-full">
+                        <div class="panel-meta">01 // LANDING PAGES</div>
+                        <h3>Одностраничные сайты</h3>
+                        <p class="panel-desc">Быстрые посадочные страницы с высокой конверсией, плавными 3D-анимациями и загрузкой за доли секунды.</p>
+                        
+                        <div class="panel-features-list">
+                            <ul>
+                                <li><span>✓</span> Уникальный дизайн (никаких конструкторов)</li>
+                                <li><span>✓</span> Анимация элементов при прокрутке</li>
+                                <li><span>✓</span> Идеальная мобильная адаптивность</li>
+                                <li><span>✓</span> Скорость загрузки 95+ в Google PageSpeed</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <span class="price-tag">от 6 000 ₽</span>
+                            <a href="#contact-v2" class="btn-panel-action scroll-to" data-task="Одностраничный сайт / Лендинг">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Multipage -->
+                <div class="service-panel" data-index="1">
+                    <div class="panel-header-vertical">
+                        <span class="panel-num">02</span>
+                        <h3>МНОГОСТРАНИЧНЫЕ</h3>
+                        <span class="panel-price-short">от 15к</span>
+                    </div>
+                    <div class="panel-content-full">
+                        <div class="panel-meta">02 // MULTIPAGE WEBSITES</div>
+                        <h3>Многостраничные сайты</h3>
+                        <p class="panel-desc">Полноценные бизнес-порталы, каталоги продукции и блоги со сложной архитектурой, оптимизированным SEO и легким администрированием.</p>
+                        
+                        <div class="panel-features-list">
+                            <ul>
+                                <li><span>✓</span> Сложная структура разделов и меню</li>
+                                <li><span>✓</span> Удобная CMS-система для редактирования</li>
+                                <li><span>✓</span> Полная SEO-оптимизация мета-тегов и картинок</li>
+                                <li><span>✓</span> Интеграция форм обратной связи и аналитики</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <span class="price-tag">от 15 000 ₽</span>
+                            <a href="#contact-v2" class="btn-panel-action scroll-to" data-task="Многостраничный сайт / Портал">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: Web Apps -->
+                <div class="service-panel active" data-index="2">
+                    <div class="panel-header-vertical">
+                        <span class="panel-num">03</span>
+                        <h3>WEB-APPS & 3D</h3>
+                        <span class="panel-price-short">от 30к</span>
+                    </div>
+                    <div class="panel-content-full">
+                        <div class="panel-meta">03 // WEB APPLICATIONS</div>
+                        <h3>Интерактивные веб-приложения</h3>
+                        <p class="panel-desc">Сложные цифровые сервисы, CRM, личные кабинеты, а также ольфакторные и 3D-конфигураторы на WebGL/Three.js.</p>
+                        
+                        <div class="panel-features-list">
+                            <ul>
+                                <li><span>✓</span> Разработка интерактивных модулей (3D, калькуляторы)</li>
+                                <li><span>✓</span> Управление состоянием (React / чистый JS)</li>
+                                <li><span>✓</span> Разработка личных кабинетов и баз данных</li>
+                                <li><span>✓</span> Кастомная физика, анимации на Canvas/WebGL</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <span class="price-tag">от 30 000 ₽</span>
+                            <a href="#contact-v2" class="btn-panel-action scroll-to" data-task="Интерактивное веб-приложение / 3D">Выбрать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPROACH / ADVANTAGES (Minimal list) -->
+        <section class="features-v2 reveal">
+            <div class="section-header-v2">
+                <div class="section-num">04 // APPROACH</div>
+                <h2 class="section-title-v2">Как мы работаем</h2>
+            </div>
+            
+            <div class="asymmetric-features-list">
+                <div class="feature-item-v2">
+                    <span class="feature-num-v2">01 /</span>
+                    <div class="feature-text-v2">
+                        <h4>Чистый код без шаблонов</h4>
+                        <p>Мы не используем Tilda, WordPress или конструкторы. Каждый сайт пишется на чистом коде, что гарантирует абсолютную свободу в дизайне и отсутствие лишнего мусора.</p>
+                    </div>
+                </div>
+                <div class="feature-item-v2">
+                    <span class="feature-num-v2">02 /</span>
+                    <div class="feature-text-v2">
+                        <h4>Сверхскорость 95+</h4>
+                        <p>Наши интерфейсы загружаются мгновенно (95-100 баллов в Google PageSpeed), снижая процент отказов и повышая приоритет сайта в SEO-выдаче.</p>
+                    </div>
+                </div>
+                <div class="feature-item-v2">
+                    <span class="feature-num-v2">03 /</span>
+                    <div class="feature-text-v2">
+                        <h4>Интерактивный маркетинг</h4>
+                        <p>Интегрируем 3D-конфигураторы, микро-симуляторы и нестандартную физику частиц для удержания пользователя на странице.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section-v2 reveal" id="contact-v2">
+            <div class="contact-grid-v2">
+                <div class="contact-info-side">
+                    <div class="section-num">05 // CONTACT</div>
+                    <h2 class="contact-title-v2">Начать проект</h2>
+                    <p>Опишите вашу идею, и мы разработаем технологичное интерактивное решение под ключ. Рассчитаем сроки и смету за 1 день.</p>
+                    
+                    <div class="contact-meta-links">
+                        <a href="mailto:hello@webkinetic.ru" class="meta-link">hello@webkinetic.ru</a>
+                        <a href="https://t.me/webkinetic" class="meta-link">t.me/webkinetic</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-side">
+                    <form id="universal-contact-form" class="contact-form-v2">
+                        <div class="form-group-v2">
+                            <input type="text" id="contact-name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group-v2">
+                            <input type="text" id="contact-link" placeholder="Telegram (@username) или Телефон" required>
+                        </div>
+                        <div class="form-group-v2">
+                            <textarea id="contact-task" placeholder="Какую задачу нужно решить?" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit-v2">Отправить запрос</button>
+                        <p class="form-success-msg" style="display: none; color: var(--color-accent); margin-top: 20px; font-weight: 600;"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Custom Category Filter Script -->
-    <script>
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
+    <!-- Small footer -->
+    <footer class="footer-v2">
+        <div class="footer-inner-v2">
+            <span>&copy; 2026 WEBKINETIC. All rights reserved.</span>
+            <span>Created by layf.</span>
+        </div>
+    </footer>
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Toggle active button class
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                // Filter cards
-                projectCards.forEach(card => {
-                    const cardCategory = card.getAttribute('data-category');
-                    if (filterValue === 'all' || cardCategory === filterValue) {
-                        card.style.display = 'flex';
-                        // Add fade-in transition
-                        card.style.opacity = '0';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transition = 'opacity 0.4s ease';
-                        }, 50);
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

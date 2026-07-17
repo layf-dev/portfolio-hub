@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBKINETIC | Interactive Web Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_v1.css">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">WEB<span class="accent">KINETIC</span></div>
+            <div class="preloader-bar-wrapper">
+                <div class="preloader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-glow"></div>
+    
+    <!-- Premium Grid Lines -->
+    <div class="bg-grid-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <main class="container">
+        <!-- HEADER / HERO -->
+        <header class="header">
+            <h1 class="title animate-hero">WEB<span class="accent">KINETIC</span></h1>
+            <p class="subtitle animate-hero">РАЗРАБОТКА ВЕБ-ИНТЕРФЕЙСОВ И САЙТОВ ДЛЯ БИЗНЕСА</p>
+            <div class="header-divider animate-hero"></div>
+            <p class="description animate-hero">Создаем технологичные одностраничные сайты, корпоративные порталы и сложные интерактивные веб-приложения с упором на премиальный дизайн и скорость работы.</p>
+            <div class="header-actions animate-hero">
+                <a href="#services-section" class="btn-main scroll-to">Услуги и цены</a>
+                <a href="#projects-section" class="btn-outline-action scroll-to">Наши работы</a>
+            </div>
+        </header>
+
+        <!-- SERVICES AND PRICES -->
+        <section class="services-section reveal" id="services-section">
+            <div class="services-header">
+                <h2 class="section-title-left">Услуги <span class="accent-text">и</span> цены</h2>
+                <p class="services-desc">Прозрачные решения для любого этапа развития вашего бизнеса. Выберите оптимальный формат взаимодействия.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon-box">⚡</div>
+                        <div class="service-info-toggle">
+                            <button class="info-toggle-btn active" data-target="desc-1">Инфо</button>
+                            <button class="info-toggle-btn" data-target="for-1">Для кого</button>
+                        </div>
+                    </div>
+                    
+                    <h3 class="service-title">Одностраничные сайты</h3>
+                    
+                    <div class="service-body">
+                        <div class="service-text active" id="desc-1">
+                            <p>Быстрые и конверсионные лендинги с индивидуальной структурой. Идеально подходят для презентации одного продукта, услуги или рекламной кампании.</p>
+                        </div>
+                        <div class="service-text" id="for-1">
+                            <ul>
+                                <li>Быстрый старт продаж и запуск рекламы</li>
+                                <li>Презентация конкретного продукта или спецпредложения</li>
+                                <li>Проекты с фокусом на максимальную конверсию в заявку</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price-box">
+                            <span class="price-val">от 6 000 ₽</span>
+                            <span class="price-term">Срок: от 3 дней</span>
+                        </div>
+                        <a href="#contact-section" class="btn-service-select scroll-to" data-task="Одностраничный сайт">Выбрать</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 (Popular) -->
+                <div class="service-card popular">
+                    <div class="service-badge">Популярное</div>
+                    <div class="service-top">
+                        <div class="service-icon-box">💻</div>
+                        <div class="service-info-toggle">
+                            <button class="info-toggle-btn active" data-target="desc-2">Инфо</button>
+                            <button class="info-toggle-btn" data-target="for-2">Для кого</button>
+                        </div>
+                    </div>
+                    
+                    <h3 class="service-title">Многостраничные сайты</h3>
+                    
+                    <div class="service-body">
+                        <div class="service-text active" id="desc-2">
+                            <p>Полноценные корпоративные порталы и каталоги со сложной структурой, интеграцией CRM, мессенджеров и подготовкой к глубокому SEO-продвижению.</p>
+                        </div>
+                        <div class="service-text" id="for-2">
+                            <ul>
+                                <li>Компании с широким перечнем услуг или товаров</li>
+                                <li>Сложные презентационные порталы брендов</li>
+                                <li>Проекты с прицелом на долгосрочный трафик из поиска</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price-box">
+                            <span class="price-val">от 15 000 ₽</span>
+                            <span class="price-term">Срок: от 7 дней</span>
+                        </div>
+                        <a href="#contact-section" class="btn-service-select scroll-to highlight" data-task="Многостраничный сайт">Выбрать</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-top">
+                        <div class="service-icon-box">⚙️</div>
+                        <div class="service-info-toggle">
+                            <button class="info-toggle-btn active" data-target="desc-3">Инфо</button>
+                            <button class="info-toggle-btn" data-target="for-3">Для кого</button>
+                        </div>
+                    </div>
+                    
+                    <h3 class="service-title">Веб-приложения & 3D</h3>
+                    
+                    <div class="service-body">
+                        <div class="service-text active" id="desc-3">
+                            <p>Сложные интерактивные системы: личные кабинеты, CRM-решения, 3D-конфигураторы выбора материалов, калькуляторы окупаемости и работа с базами данных.</p>
+                        </div>
+                        <div class="service-text" id="for-3">
+                            <ul>
+                                <li>Уникальные интерактивные сервисы и стартапы</li>
+                                <li>Системы автоматизации внутренних бизнес-процессов</li>
+                                <li>Личные кабинеты и интерактивные панели клиентов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="service-footer">
+                        <div class="service-price-box">
+                            <span class="price-val">от 30 000 ₽</span>
+                            <span class="price-term">Срок: от 14 дней</span>
+                        </div>
+                        <a href="#contact-section" class="btn-service-select scroll-to" data-task="Интерактив / Веб-приложение">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom CTA Banner (Webify style) -->
+            <div class="custom-cta-banner reveal">
+                <div class="banner-left">
+                    <div class="banner-spark">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="banner-info">
+                        <h3>Не нашли подходящее решение?</h3>
+                        <p>Мы создаем <span class="highlight-text">не только стандартные сайты и веб-приложения</span>. Наша команда полностью открыта к любым индивидуальным предложениям, сложным интеграциям, нестандартным механикам и реализации масштабных цифровых сервисов под ключ.</p>
+                    </div>
+                </div>
+                <a href="#contact-section" class="btn-banner-action scroll-to" data-task="Нестандартное решение / Индивидуальная идея">Обсудить идею</a>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="projects-section reveal" id="projects-section">
+            <h2 class="section-title">Наши проекты</h2>
+            <p class="section-subtitle">Галерея разработанных интерактивных решений</p>
+
+            <div class="slider-outer-wrapper">
+                <button class="slider-arrow prev-slide" aria-label="Назад">&larr;</button>
+                
+                <div class="slider-window">
+                    <div class="projects-slider">
+                        <!-- Project 1: Luxury Detailing -->
+                        <a href="detailing/index.html" class="project-card active" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800" alt="Luxury Detailing">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>LUXURY DETAILING</h2>
+                                <p>Элегантное решение для премиум-студий. Строгий дизайн с акцентом на латунные детали и интерактивный калькулятор услуг.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 2: Tuning Studio Pro -->
+                        <a href="tuning/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800" alt="Tuning Studio Pro">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>TUNING STUDIO PRO</h2>
+                                <p>Брутальный стиль для тюнинг-ателье. Эффекты кибер-помех, бегущая строка и мощные анимации переходов.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 3: Minimalist Auto -->
+                        <a href="minimalist/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&q=80&w=800" alt="Minimalist Auto">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>MINIMALIST AUTO</h2>
+                                <p>Строгий монохром в стиле фестивальных сайтов. Интерактивный следящий курсор и классический слайдер сравнения До / После.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 4: Modus Studio -->
+                        <a href="modus/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=800" alt="Modus Studio">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>MODUS STUDIO</h2>
+                                <p>Премиальный мебельный конфигуратор. Интерактивный подбор тканей, наполнения диванов, расчет цены на лету и корзина.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 5: Forte Studio -->
+                        <a href="forte/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Forte Studio">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>FORTE STUDIO</h2>
+                                <p>Элитное мебельное производство. Выдвижной горизонтальный шоукейс разделов каталога, опросник-квиз стоимости и форма отправки эскизов.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 6: Aura Clinic -->
+                        <a href="aura/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=800" alt="Aura Clinic">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>AURA CLINIC</h2>
+                                <p>Авангардная клиника косметологии. Фиксированный боковой сайдбар, 3D-наклонные карточки зон лица, интерактивная линза-лупа До/После и велнес-квиз.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 7: Sense Lab -->
+                        <a href="scent/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=800" alt="Sense Lab">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>SENSE LAB</h2>
+                                <p>Ателье селективной парфюмерии. Ольфакторный симулятор с динамическим смешиванием масел и цвета жидкости, опросник ароматического архетипа.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 8: Anticafe Silence & Move -->
+                        <a href="anticafe/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" alt="Anticafe Silence & Move">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>ТИШИНА & ДВИЖ</h2>
+                                <p>Антикафе нового поколения. Журнальный брутализм, интерактивный переключатель атмосферы (коворкинг vs гейминг), генерация звука на Web Audio API и калькулятор тарифа.</p>
+                            </div>
+                        </a>
+
+                        <!-- Project 9: Avito Pro Course -->
+                        <a href="avitoprofit/index.html" class="project-card" target="_blank">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Avito Pro Course">
+                                <div class="card-overlay">
+                                    <span class="btn-demo">Смотреть Демо</span>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2>AVITO PRO</h2>
+                                <p>Landing page онлайн-курса по продвижению на Авито. Минималистичный темный дизайн, интерактивный ROI-калькулятор лидов для разных ниш бизнеса и аккордеон учебных модулей.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <button class="slider-arrow next-slide" aria-label="Вперед">&rarr;</button>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+                <span class="dot" data-index="5"></span>
+                <span class="dot" data-index="6"></span>
+                <span class="dot" data-index="7"></span>
+                <span class="dot" data-index="8"></span>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE PLAYGROUND (LABORATORY) -->
+        <section class="playground-section reveal" id="playground-section">
+            <h2 class="section-title">Лаборатория кинетики</h2>
+            <p class="section-subtitle">Попробуйте интерфейс на ощупь. Управляйте физикой частиц в реальном времени</p>
+            
+            <div class="playground-container">
+                <div class="canvas-wrapper">
+                    <canvas id="playground-canvas"></canvas>
+                    <div class="canvas-hint">Кликните по экрану или наведите мышь</div>
+                </div>
+                
+                <div class="playground-controls">
+                    <div class="control-header">
+                        <h3>Панель управления</h3>
+                        <p>Интерфейсы должны быть живыми. Настройте параметры симуляции под себя:</p>
+                    </div>
+                    
+                    <div class="control-groups">
+                        <div class="control-group">
+                            <label for="slider-speed">Скорость движения: <span id="val-speed">1.2</span></label>
+                            <input type="range" id="slider-speed" min="0.5" max="5" step="0.1" value="1.2">
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="slider-gravity">Сила притяжения мыши: <span id="val-gravity">110</span></label>
+                            <input type="range" id="slider-gravity" min="50" max="250" step="10" value="110">
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="slider-size">Размер точек: <span id="val-size">3.5</span></label>
+                            <input type="range" id="slider-size" min="1" max="6" step="0.5" value="3.5">
+                        </div>
+
+                        <div class="control-group">
+                            <label>Цветовой спектр:</label>
+                            <div class="color-options">
+                                <button class="color-btn" data-color="cyan" style="--btn-color: #00f2fe;"></button>
+                                <button class="color-btn" data-color="platinum" style="--btn-color: #e2e8f0;"></button>
+                                <button class="color-btn" data-color="purple" style="--btn-color: #a855f7;"></button>
+                                <button class="color-btn active" data-color="rainbow" style="background: linear-gradient(45deg, #00f2fe, #a855f7);"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="playground-desc">
+                        <p>Мы пишем сайты с чистой физикой и отзывчивостью, без использования конструкторов. Каждый клик на Canvas рождает импульс!</p>
+                        <a href="#contact-section" class="btn-playground-action scroll-to" data-task="Интерактивный сайт с анимацией частиц">Хочу такой интерфейс</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section class="contact-section reveal" id="contact-section">
+            <h2 class="section-title">Обсудить проект</h2>
+            <p class="section-subtitle">Опишите вашу задачу, и мы предложим оптимальное решение и рассчитаем смету</p>
+            
+            <div class="contact-container">
+                <form id="universal-contact-form" class="contact-form">
+                    <div class="form-inputs">
+                        <input type="text" id="contact-name" placeholder="Ваше имя" required>
+                        <input type="text" id="contact-link" placeholder="Telegram (@username) или Телефон" required>
+                        <textarea id="contact-task" placeholder="Опишите вашу задачу (например: тип сайта, пожелания к дизайну/функционалу)" rows="4" required></textarea>
+                        <button type="submit" class="btn-submit-form">Отправить запрос</button>
+                    </div>
+                    <p class="form-success-msg" style="display: none; color: var(--color-accent); margin-top: 20px; font-weight: 600; text-align: center;"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- STANDARDS / FEATURES -->
+        <section class="features reveal" id="features-section">
+            <h2 class="section-title">Наши стандарты</h2>
+            <p class="section-subtitle">За счет чего наши решения приносят реальные деньги бизнесу</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>⚡ Скорость загрузки 95+</h3>
+                    <p>Мы пишем сайты вручную на чистом HTML, CSS и JS. Никакого перегруженного WordPress или Tilda. Ваши клиенты увидят сайт мгновенно.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Мобильная адаптивность</h3>
+                    <p>Более 80% заходов на сайты услуг происходят со смартфонов. Мы до пикселя выверяем верстку, чтобы клиенту было удобно звонить и оставлять заявки.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 SEO-подготовка</h3>
+                    <p>Прописываем мета-теги, настраиваем семантическую разметку и регистрируем в поисковиках. Ваш сайт начнет ранжироваться в Google и Яндексе быстрее.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer reveal">
+            <div class="contact-links">
+                <a href="https://t.me/layf_ceo" class="btn-contact btn-tg" target="_blank">НАПИСАТЬ В TELEGRAM</a>
+                <a href="tel:+79600451512" class="btn-contact btn-phone">+7 (960) 045-15-12</a>
+            </div>
+            <p class="footer-hint">Обсудим ваш проект — ответим в течение часа</p>
+        </footer>
+    </main>
+
+    <script src="script_v1.js"></script>
+</body>
+</html>
