@@ -130,184 +130,82 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // 3. Horizontal Projects Slider (Centering & Snap)
+    // 3. Interactive Portfolio Grid (Filtering & Show More)
     // ==========================================
-    const slider = document.querySelector('.projects-slider');
-    const sliderWindow = document.querySelector('.slider-window');
-    const cards = document.querySelectorAll('.projects-slider .project-card');
-    const prevBtn = document.querySelector('.prev-slide');
-    const nextBtn = document.querySelector('.next-slide');
-    const dots = document.querySelectorAll('.slider-dots .dot');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const gridCards = document.querySelectorAll('.project-grid-card');
+    const toggleMoreBtn = document.getElementById('toggle-more-projects');
 
-    if (slider && cards.length > 0) {
-        const originalCount = cards.length;
+    let isExpanded = false;
 
-        // Clone first 3 slides to the end
-        for (let i = 0; i < 3; i++) {
-            const clone = cards[i].cloneNode(true);
-            clone.classList.remove('active');
-            slider.appendChild(clone);
-        }
-        // Clone last 3 slides to the start
-        for (let i = originalCount - 1; i >= originalCount - 3; i--) {
-            const clone = cards[i].cloneNode(true);
-            clone.classList.remove('active');
-            slider.insertBefore(clone, slider.firstChild);
-        }
+    // Filter Logic
+    if (filterTabs.length > 0 && gridCards.length > 0) {
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
 
-        // Re-select all cards (now including clones)
-        let allCards = slider.querySelectorAll('.project-card');
-        let currentIndex = 3; // Start on first original slide (index 3)
-        let isDragging = false;
-        let startX = 0;
-        let currentTranslate = 0;
-        let prevTranslate = 0;
-        let animationID = 0;
+                const selectedCategory = tab.getAttribute('data-category');
 
-        const updateSliderPosition = (smooth = true) => {
-            if (!sliderWindow) return;
-            allCards = slider.querySelectorAll('.project-card');
-            
-            const windowWidth = sliderWindow.getBoundingClientRect().width;
-            const activeCard = allCards[currentIndex];
-            if (!activeCard) return;
-            const cardWidth = activeCard.getBoundingClientRect().width;
-            const cardLeft = activeCard.offsetLeft;
+                gridCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
 
-            currentTranslate = -(cardLeft - (windowWidth / 2 - cardWidth / 2));
-            
-            if (smooth) {
-                slider.style.transition = 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+                    if (selectedCategory === 'all') {
+                        card.classList.remove('is-filtered-out');
+                        if (!isExpanded && card.classList.contains('initial-hidden')) {
+                            // keep hidden if not expanded
+                        } else {
+                            card.style.display = 'flex';
+                        }
+                    } else {
+                        if (cardCategory === selectedCategory) {
+                            card.classList.remove('is-filtered-out');
+                            card.style.display = 'flex';
+                        } else {
+                            card.classList.add('is-filtered-out');
+                        }
+                    }
+                });
+
+                // Hide/show more button when filtering
+                if (toggleMoreBtn) {
+                    if (selectedCategory !== 'all') {
+                        toggleMoreBtn.style.display = 'none';
+                    } else {
+                        toggleMoreBtn.style.display = 'inline-block';
+                    }
+                }
+            });
+        });
+    }
+
+    // Toggle More Projects Button Logic
+    if (toggleMoreBtn) {
+        toggleMoreBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+
+            gridCards.forEach(card => {
+                if (card.classList.contains('initial-hidden')) {
+                    if (isExpanded) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+
+            if (isExpanded) {
+                toggleMoreBtn.textContent = 'Свернуть работы';
             } else {
-                slider.style.transition = 'none';
-            }
-            
-            slider.style.transform = `translateX(${currentTranslate}px)`;
-            prevTranslate = currentTranslate;
-
-            // Update active states
-            allCards.forEach((card, idx) => {
-                if (idx === currentIndex) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
+                toggleMoreBtn.textContent = 'Показать все работы (9)';
+                // Smooth scroll back to grid top if collapsed
+                const projectsGrid = document.getElementById('projects-v2');
+                if (projectsGrid) {
+                    projectsGrid.scrollIntoView({ behavior: 'smooth' });
                 }
-            });
-
-            // Map index to original dots list
-            const realDotIndex = (currentIndex - 3 + originalCount) % originalCount;
-            dots.forEach((dot, idx) => {
-                if (idx === realDotIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        };
-
-        const goToSlide = (index) => {
-            currentIndex = index;
-            updateSliderPosition(true);
-        };
-
-        // Reset positions instantly on transitionend for infinite looping
-        slider.addEventListener('transitionend', () => {
-            if (isDragging) return;
-            
-            if (currentIndex >= allCards.length - 3) {
-                currentIndex = 3; // original first
-                updateSliderPosition(false);
-            } else if (currentIndex < 3) {
-                currentIndex = allCards.length - 4; // original last
-                updateSliderPosition(false);
             }
         });
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                goToSlide(currentIndex - 1);
-            });
-        }
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                goToSlide(currentIndex + 1);
-            });
-        }
-
-        dots.forEach(dot => {
-            dot.addEventListener('click', (e) => {
-                const targetIdx = parseInt(e.target.getAttribute('data-index'));
-                goToSlide(targetIdx + 3);
-            });
-        });
-
-        // Initialize Position
-        setTimeout(() => updateSliderPosition(false), 100);
-        window.addEventListener('resize', () => updateSliderPosition(false));
-
-        // DRAG & SWIPE PHYSICS
-        const touchStart = (event) => {
-            isDragging = true;
-            slider.style.transition = 'none';
-            
-            // If dragging near boundaries, snap to real index first to prevent breaking layout
-            if (currentIndex >= allCards.length - 3) {
-                currentIndex = 3;
-                updateSliderPosition(false);
-            } else if (currentIndex < 3) {
-                currentIndex = allCards.length - 4;
-                updateSliderPosition(false);
-            }
-
-            startX = getPositionX(event);
-            animationID = requestAnimationFrame(animation);
-        };
-
-        const touchMove = (event) => {
-            if (isDragging) {
-                const currentX = getPositionX(event);
-                const diff = currentX - startX;
-                currentTranslate = prevTranslate + diff;
-            }
-        };
-
-        const touchEnd = () => {
-            if (isDragging) {
-                isDragging = false;
-                cancelAnimationFrame(animationID);
-                const movedBy = currentTranslate - prevTranslate;
-                
-                if (movedBy < -80) {
-                    currentIndex += 1;
-                } else if (movedBy > 80) {
-                    currentIndex -= 1;
-                }
-                
-                updateSliderPosition(true);
-            }
-        };
-
-        const getPositionX = (event) => {
-            return event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
-        };
-
-        const animation = () => {
-            if (isDragging) {
-                slider.style.transform = `translateX(${currentTranslate}px)`;
-                requestAnimationFrame(animation);
-            }
-        };
-
-        slider.addEventListener('mousedown', touchStart);
-        slider.addEventListener('mousemove', touchMove);
-        window.addEventListener('mouseup', touchEnd);
-        slider.addEventListener('mouseleave', () => {
-            if (isDragging) touchEnd();
-        });
-
-        slider.addEventListener('touchstart', touchStart, { passive: true });
-        slider.addEventListener('touchmove', touchMove, { passive: true });
-        slider.addEventListener('touchend', touchEnd);
     }
 
     // ==========================================
