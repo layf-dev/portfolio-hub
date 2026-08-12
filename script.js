@@ -130,19 +130,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // 3. Interactive Portfolio Grid (Filtering & Show More)
+    // 3. Interactive Portfolio Grid Filtering
     // ==========================================
     const filterTabs = document.querySelectorAll('.filter-tab');
     const gridCards = document.querySelectorAll('.project-grid-card');
-    const toggleMoreBtn = document.getElementById('toggle-more-projects');
 
-    let isExpanded = false;
-
-    // Filter Logic
     if (filterTabs.length > 0 && gridCards.length > 0) {
         filterTabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // Update active tab
                 filterTabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
 
@@ -151,60 +146,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 gridCards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
 
-                    if (selectedCategory === 'all') {
+                    if (selectedCategory === 'all' || cardCategory === selectedCategory) {
                         card.classList.remove('is-filtered-out');
-                        if (!isExpanded && card.classList.contains('initial-hidden')) {
-                            // keep hidden if not expanded
-                        } else {
-                            card.style.display = 'flex';
-                        }
-                    } else {
-                        if (cardCategory === selectedCategory) {
-                            card.classList.remove('is-filtered-out');
-                            card.style.display = 'flex';
-                        } else {
-                            card.classList.add('is-filtered-out');
-                        }
-                    }
-                });
-
-                // Hide/show more button when filtering
-                if (toggleMoreBtn) {
-                    if (selectedCategory !== 'all') {
-                        toggleMoreBtn.style.display = 'none';
-                    } else {
-                        toggleMoreBtn.style.display = 'inline-block';
-                    }
-                }
-            });
-        });
-    }
-
-    // Toggle More Projects Button Logic
-    if (toggleMoreBtn) {
-        toggleMoreBtn.addEventListener('click', () => {
-            isExpanded = !isExpanded;
-
-            gridCards.forEach(card => {
-                if (card.classList.contains('initial-hidden')) {
-                    if (isExpanded) {
                         card.style.display = 'flex';
                     } else {
+                        card.classList.add('is-filtered-out');
                         card.style.display = 'none';
                     }
-                }
+                });
             });
-
-            if (isExpanded) {
-                toggleMoreBtn.textContent = 'Свернуть работы';
-            } else {
-                toggleMoreBtn.textContent = 'Показать все работы (9)';
-                // Smooth scroll back to grid top if collapsed
-                const projectsGrid = document.getElementById('projects-v2');
-                if (projectsGrid) {
-                    projectsGrid.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
         });
     }
 

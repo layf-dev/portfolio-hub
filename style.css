@@ -459,9 +459,6 @@ body.hero-start .hero-visual-block.animate-hero {
                 box-shadow 0.4s ease,
                 opacity 0.4s ease;
 }
-.project-grid-card.initial-hidden {
-    display: none !important;
-}
 .project-grid-card.is-filtered-out {
     display: none !important;
 }
