@@ -1068,9 +1068,29 @@ body.hero-start .hero-visual-block.animate-hero {
     .hero-huge-title {
         font-size: 4rem;
     }
+    .projects-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
+    .projects-grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .portfolio-filter-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 15px;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+    }
+    .filter-tab {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
     /* Split Panels mobile layout */
     .split-services-container {
         flex-direction: column;
